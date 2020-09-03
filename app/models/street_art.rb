@@ -1,4 +1,5 @@
 class StreetArt < ApplicationRecord
+  belongs_to :user
   serialize :image_urls, Array
   validates_presence_of :latitude
   validates_presence_of :longitude
