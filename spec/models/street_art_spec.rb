@@ -10,4 +10,8 @@ describe StreetArt, type: :model do
     it { should validate_presence_of :zipcode }
     it { should validate_presence_of :image_urls }
   end
+
+  describe 'relationships' do
+    it { should belong_to :user }
+  end
 end
