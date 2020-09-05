@@ -1,21 +1,21 @@
 module Types
   class StreetArtType < Types::BaseObject
     field :id, ID, null: false
-    field :latitude, String, null: true
-    field :longitude, String, null: true
-    field :address, String, null: true
-    field :city, String, null: true
-    field :state, String, null: true
-    field :zipcode, String, null: true
-    field :image_urls, String, null: true
+    field :latitude, String, null: false
+    field :longitude, String, null: false
+    field :address, String, null: false
+    field :city, String, null: false
+    field :state, String, null: false
+    field :zipcode, String, null: false
+    field :image_urls, String, null: false
     field :description, String, null: true
     field :artist_name, String, null: true
     field :art_name, String, null: true
     field :instagram_handle, String, null: true
-    field :favorite, Boolean, null: true
-    field :visited, Boolean, null: true
+    field :favorite, Boolean, null: false
+    field :visited, Boolean, null: false
     field :created_at, GraphQL::Types::ISO8601DateTime, null: false
     field :updated_at, GraphQL::Types::ISO8601DateTime, null: false
-    field :user_id, Integer, null: true
+    field :user_id, Integer, null: false
   end
 end
