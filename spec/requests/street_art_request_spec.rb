@@ -61,6 +61,24 @@ RSpec.describe "art requests", type: :request do
     expect(response[:data][:createStreetArt][:id].to_i).to be_a(Integer)
   end
 
+  it "add new street art post to database without coordinates" do
+
+    post "/graphql", params: { query: location_query(user_id: @user.id)}
+
+    response = JSON.parse(@response.body, symbolize_names: true)
+
+    expect(response[:data][:createStreetArt][:id].to_i).to be_a(Integer)
+  end
+
+  it "add new street art post to database without address" do
+
+    post "/graphql", params: { query: location2_query(user_id: @user.id)}
+
+    response = JSON.parse(@response.body, symbolize_names: true)
+
+    expect(response[:data][:createStreetArt][:id].to_i).to be_a(Integer)
+  end
+
   def base_query(user_id:)
     <<~GQL
       mutation {
@@ -95,6 +113,38 @@ RSpec.describe "art requests", type: :request do
           city: "Rockford"
           state: "IL"
           zipcode: "61108"
+          imageUrls: "['url', 'url', 'url']"
+        }) {
+            id
+            }
+      }
+    GQL
+  end
+
+  def location_query(user_id:)
+    <<~GQL
+      mutation {
+        createStreetArt( input: {
+          userId: #{user_id}
+          address: "1136 Easton Parkway"
+          city: "Rockford"
+          state: "IL"
+          zipcode: "61108"
+          imageUrls: "['url', 'url', 'url']"
+        }) {
+            id
+            }
+      }
+    GQL
+  end
+
+  def location2_query(user_id:)
+    <<~GQL
+      mutation {
+        createStreetArt( input: {
+          userId: #{user_id}
+          latitude: "42.255653"
+          longitude: "-89.019156"
           imageUrls: "['url', 'url', 'url']"
         }) {
             id
