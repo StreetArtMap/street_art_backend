@@ -8,7 +8,7 @@ describe StreetArt, type: :model do
     it { should validate_presence_of :city }
     it { should validate_presence_of :state }
     it { should validate_presence_of :zipcode }
-    it { should validate_presence_of :image_urls }
+    # it { should validate_presence_of :image_urls }
   end
 
   describe 'relationships' do
