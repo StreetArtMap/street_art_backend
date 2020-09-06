@@ -1,8 +1,6 @@
 require 'rails_helper'
 require 'graphql'
 
-
-
 RSpec.describe "art requests", type: :request do
 
   it "returns all StreetArt" do

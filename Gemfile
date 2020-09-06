@@ -9,6 +9,8 @@ gem 'rails', '~> 5.1.7'
 gem 'pg'
 gem 'puma', '~> 3.7'
 gem 'graphql'
+gem 'figaro'
+gem 'faraday'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -16,6 +18,8 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'shoulda-matchers'
   gem 'simplecov'
+  gem 'faker'
+  gem 'factory_bot_rails'
 end
 
 group :development do
