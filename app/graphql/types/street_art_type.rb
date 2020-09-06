@@ -7,8 +7,7 @@ module Types
     field :city, String, null: false
     field :state, String, null: false
     field :zipcode, String, null: false
-    #image_urls should be changed back to null: false
-    field :image_urls, String, null: true
+    field :image_urls, String, null: false
     field :description, String, null: true
     field :artist_name, String, null: true
     field :art_name, String, null: true
@@ -17,7 +16,6 @@ module Types
     field :visited, Boolean, null: false
     field :created_at, GraphQL::Types::ISO8601DateTime, null: false
     field :updated_at, GraphQL::Types::ISO8601DateTime, null: false
-    # field :user_id, Integer, null: false
-    field :user, [Types::UserType], null: false
+    field :user_id, Integer, null: false
   end
 end
