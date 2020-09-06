@@ -6,6 +6,22 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+user = FactoryBot.create(:user)
+15.times do
+  FactoryBot.create(:street_art, user: user)
+end
+# factory :street_art do
+#   association :user
+#   latitude { Faker::Address.latitude }
+#   longitude { Faker::Address.longitude }
+#   address { Faker::Address.street_address }
+#   city { Faker::Movies::LordOfTheRings.location }
+#   state { Faker::Address.state_abbr }
+#   zipcode { Faker::Address.zip }
+#   image_urls {[ Faker::Fillmurray.image, Faker::Fillmurray.image, Faker::Fillmurray.image ]}
+#   description { Faker::Movies::StarWars.quote }
+#   artist_name { Faker::Artist.name }
+# end
 user = User.create(username: "Hank Hill", email: "ProPAIN@aol.com")
 
 user.street_arts.create(latitude: "39.7666", longitude: "104.9837", address: "RiNo", city: "Denver", state: "CO", zipcode: "80216", image_urls: ["https://cdn.5280.com/2017/04/RiNo-neighborhood-street-art.jpg"], description: "neat-o!", artist_name: "Larry", art_name: "cool-art-1", favorite: true, visited: true)
