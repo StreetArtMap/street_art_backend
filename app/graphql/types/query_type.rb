@@ -14,7 +14,6 @@ module Types
     field :street_arts, [Types::StreetArtType], null: false
 
     def street_arts
-      require "pry";binding.pry
       StreetArt.all
     end
   end
