@@ -31,9 +31,7 @@ RSpec.describe "art requests", type: :request do
     expect(art[:city]).to eq(@art_post[:city])
     expect(art[:state]).to eq(@art_post[:state])
     expect(art[:zipcode]).to eq(@art_post[:zipcode])
-
-    # expect(art[:imageUrls]).to eq(@art_post[:image_urls])
-
+    expect(art[:imageUrls]).to eq(@art_post[:image_urls])
     expect(art[:description]).to eq(@art_post[:description])
     expect(art[:artistName]).to eq(@art_post[:artist_name])
     expect(art[:artName]).to eq(@art_post[:art_name])
@@ -46,6 +44,62 @@ RSpec.describe "art requests", type: :request do
   end
 
   it "add new street art post to database" do
-    post "/graphql", params: { query: "mutation { createStreetArt (latitude: '8927', longitude: '3443', address: 'hd sjsn', city: 'rockford', state: 'il', zipcode: '83339', description: ':bkah ablh', artistName: 'sddf', artName: 'dasf', instagramHandle: 'sfdfsfd', favorite: false, visited: true, userId: #{@user.id})}", operationName: nil, context: nil}
+
+    post "/graphql", params: { query: base_query(user_id: @user.id)}
+
+    response = JSON.parse(@response.body, symbolize_names: true)
+
+    expect(response[:data][:createStreetArt][:id].to_i).to be_a(Integer)
+  end
+
+  it "add new street art post to database without optional fields" do
+
+    post "/graphql", params: { query: sad_query(user_id: @user.id)}
+
+    response = JSON.parse(@response.body, symbolize_names: true)
+
+    expect(response[:data][:createStreetArt][:id].to_i).to be_a(Integer)
+  end
+
+  def base_query(user_id:)
+    <<~GQL
+      mutation {
+        createStreetArt( input: {
+          userId: #{user_id}
+          latitude: "39.7666"
+          longitude: "104.9837"
+          address: "1136 Easton Parkway"
+          city: "Rockford"
+          state: "IL"
+          zipcode: "61108"
+          description: "bkah ablh"
+          artistName: "sddf"
+          artName: "dasf"
+          instagramHandle: "sfdfsfd"
+          imageUrls: "['url', 'url', 'url']"
+        }) {
+            id
+            }
+      }
+    GQL
+  end
+
+  def sad_query(user_id:)
+    <<~GQL
+      mutation {
+        createStreetArt( input: {
+          userId: #{user_id}
+          latitude: "39.7666"
+          longitude: "104.9837"
+          address: "1136 Easton Parkway"
+          city: "Rockford"
+          state: "IL"
+          zipcode: "61108"
+          imageUrls: "['url', 'url', 'url']"
+        }) {
+            id
+            }
+      }
+    GQL
   end
 end
