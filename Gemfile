@@ -11,6 +11,7 @@ gem 'puma', '~> 3.7'
 gem 'graphql'
 gem 'figaro'
 gem 'faraday'
+gem 'rack-cors'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
