@@ -6,7 +6,7 @@ This application is a Ruby on Rails API service, utilizing GraphQL to create use
 
 ## Schema
 
-## Endpoints 
+## Endpoints
 
 ## Tech Stack
 
@@ -37,6 +37,12 @@ Next, clone down this repository onto your local machine. Run these commands in 
 Once this is all set up and you aren't getting any errors you can run our test suite.
 
 - `$ bundle exec rspec`
+
+*If there is a problem with the database and you need to scrap and start over:
+
+- `$ rake db:drop`
+
+Then run the three `db` commands above.
 
 ### Troubleshooting
 
