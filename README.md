@@ -46,4 +46,4 @@ Then run the three `db` commands above.
 
 ### Troubleshooting
 
-If the `db:seed` command works, there is no return value. Pay attention to what comes back because you may not realize that your seeding has failed. You can track down errors in the `db/seeds` file. The seeds are generated using FactoryBot, and the specifications are found in `spec/factories`. You can find our more about Faker [here](https://github.com/faker-ruby/faker) and FactoryBot [here](https://github.com/thoughtbot/factory_bot/blob/master/GETTING_STARTED.md).
+If the `db:seed` command works, there is no return value. Pay attention to what comes back because you may not realize that your seeding has failed. You can track down errors in the `db/seeds` file. The seeds are generated using FactoryBot, and the specifications are found in `spec/factories`. You can find out more about Faker [here](https://github.com/faker-ruby/faker) and FactoryBot [here](https://github.com/thoughtbot/factory_bot/blob/master/GETTING_STARTED.md).
