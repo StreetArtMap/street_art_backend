@@ -22,9 +22,8 @@ end
 #   description { Faker::Movies::StarWars.quote }
 #   artist_name { Faker::Artist.name }
 # end
-user = User.create(username: "Hank Hill", email: "ProPAIN@aol.com")
-
-user.street_arts.create(latitude: "39.7666", longitude: "104.9837", address: "RiNo", city: "Denver", state: "CO", zipcode: "80216", image_urls: ["https://cdn.5280.com/2017/04/RiNo-neighborhood-street-art.jpg"], description: "neat-o!", artist_name: "Larry", art_name: "cool-art-1", favorite: true, visited: true)
-user.street_arts.create(latitude: "39.7527", longitude: "105.0017", address: "LoDo", city: "Denver", state: "CO", zipcode: "80202", image_urls: ["https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTW8zd6DEZ5UHfY8r8NJB-jEcpGAlbHlwg6Cg&usqp=CAU"], description: "neat-o!", artist_name: "Larry",  art_name: "cool-art-2", instagram_handle: "@insta", favorite: false, visited: true)
-user.street_arts.create(latitude: "39.7581", longitude: "104.9874", address: "Five Points", city: "Denver", state: "CO", zipcode: "80216", image_urls: ["https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRe-qGNr3_dvdgNqE6g81qa4OTlSvmfbiGCRw&usqp=CAU"], description: "woww!", artist_name: "Sammi", instagram_handle: "@insta", favorite: true, visited: true)
-StreetArt.create!({})
+# user = User.create(username: "Hank Hill", email: "ProPAIN@aol.com")
+#
+# user.street_arts.create(latitude: "39.7666", longitude: "104.9837", address: "RiNo", city: "Denver", state: "CO", zipcode: "80216", image_urls: ["https://cdn.5280.com/2017/04/RiNo-neighborhood-street-art.jpg"], description: "neat-o!", artist_name: "Larry", art_name: "cool-art-1", favorite: true, visited: true)
+# user.street_arts.create(latitude: "39.7527", longitude: "105.0017", address: "LoDo", city: "Denver", state: "CO", zipcode: "80202", image_urls: ["https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTW8zd6DEZ5UHfY8r8NJB-jEcpGAlbHlwg6Cg&usqp=CAU"], description: "neat-o!", artist_name: "Larry",  art_name: "cool-art-2", instagram_handle: "@insta", favorite: false, visited: true)
+# user.street_arts.create(latitude: "39.7581", longitude: "104.9874", address: "Five Points", city: "Denver", state: "CO", zipcode: "80216", image_urls: ["https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRe-qGNr3_dvdgNqE6g81qa4OTlSvmfbiGCRw&usqp=CAU"], description: "woww!", artist_name: "Sammi", instagram_handle: "@insta", favorite: true, visited: true)
