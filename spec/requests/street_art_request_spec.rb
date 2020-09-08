@@ -4,10 +4,11 @@ require 'graphql'
 RSpec.describe "art requests", type: :request do
 
   before(:all) do
-    @user = User.create(username: "Hank Hill", email: "ProPAIN@aol.com")
-    @art_post = @user.street_arts.create(latitude: "39.7666", longitude: "104.9837", address: "RiNo", city: "Denver", state: "CO", zipcode: "80216", image_urls: ["https://cdn.5280.com/2017/04/RiNo-neighborhood-street-art.jpg"], description: "neat-o!", artist_name: "Larry", art_name: "cool-art-1", favorite: true, visited: true)
-    @user.street_arts.create(latitude: "39.7527", longitude: "105.0017", address: "LoDo", city: "Denver", state: "CO", zipcode: "80202", image_urls: ["https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTW8zd6DEZ5UHfY8r8NJB-jEcpGAlbHlwg6Cg&usqp=CAU"], description: "neat-o!", artist_name: "Larry",  art_name: "cool-art-2", instagram_handle: "@insta", favorite: false, visited: true)
-    @user.street_arts.create(latitude: "39.7581", longitude: "104.9874", address: "Five Points", city: "Denver", state: "CO", zipcode: "80216", image_urls: ["https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRe-qGNr3_dvdgNqE6g81qa4OTlSvmfbiGCRw&usqp=CAU"], description: "neat-o!", artist_name: "Larry", instagram_handle: "@insta", favorite: true, visited: true)
+    @user = FactoryBot.create(:user)
+    @art_post = FactoryBot.create(:street_art, user: @user)
+    2.times do
+      FactoryBot.create(:street_art, user: @user)
+    end
   end
 
   after(:context) do
@@ -72,7 +73,7 @@ RSpec.describe "art requests", type: :request do
 
   it "add new street art post to database without address" do
 
-    post "/graphql", params: { query: location2_query(user_id: @user.id)}
+    post "/graphql", params: { query: location_query2(user_id: @user.id)}
 
     response = JSON.parse(@response.body, symbolize_names: true)
 
@@ -138,7 +139,7 @@ RSpec.describe "art requests", type: :request do
     GQL
   end
 
-  def location2_query(user_id:)
+  def location_query2(user_id:)
     <<~GQL
       mutation {
         createStreetArt( input: {
