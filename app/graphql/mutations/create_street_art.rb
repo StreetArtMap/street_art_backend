@@ -16,7 +16,22 @@ class Mutations::CreateStreetArt < Mutations::BaseMutation
 
   type Types::StreetArtType
 
-  def resolve(latitude: nil, longitude: nil, address: nil, city: nil, state: nil, zipcode: nil, image_urls:, description: nil, artist_name: nil, art_name: nil, instagram_handle: nil, favorite: false, visited: false, user_id:)
-    User.find(user_id).street_arts.create!(latitude: latitude, longitude: longitude, address: address, city: city, state: state, zipcode: zipcode, image_urls: image_urls, description: description, artist_name: artist_name, art_name: art_name, instagram_handle: instagram_handle, favorite: favorite, visited: visited)
+  def resolve(latitude: nil, longitude: nil, address: nil, city: nil, state: nil,
+              zipcode: nil, image_urls:, description: nil, artist_name: nil, art_name: nil,
+              instagram_handle: nil, favorite: false, visited: false, user_id:)
+
+    User.find(user_id).street_arts.create!(latitude: latitude,
+                                          longitude: longitude,
+                                          address: address,
+                                          city: city,
+                                          state: state,
+                                          zipcode: zipcode,
+                                          image_urls: image_urls,
+                                          description: description,
+                                          artist_name: artist_name,
+                                          art_name: art_name,
+                                          instagram_handle: instagram_handle,
+                                          favorite: favorite,
+                                          visited: visited)
   end
 end
