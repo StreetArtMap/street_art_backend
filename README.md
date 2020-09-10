@@ -8,6 +8,8 @@ This application is a Ruby on Rails API service, utilizing GraphQL to create use
 
 ## Schema
 
+![Schema](/public/schema.png)
+
 ## Endpoints
 
 ## Tech Stack
@@ -36,7 +38,7 @@ Next, clone down this repository onto your local machine. Run these commands in 
 - `$ rake db:migrate`
 - `$ rake db:seed`
 
-You will also need to put your API Key for mapquest into the `config/application.yml` file, and then `.gitignore` this file. Start by running:
+You will also need to put your API Key for Mapquest into the `config/application.yml` file, and then `.gitignore` this file. Start by running:
 
 - `$ bundle exec figaro install`
 
