@@ -8,6 +8,7 @@ RSpec.describe "art requests", type: :request do
     2.times do
       FactoryBot.create(:street_art, user: @user)
     end
+    @street_art = @user.street_arts[0]
   end
 
   after(:context) do
@@ -69,6 +70,17 @@ RSpec.describe "art requests", type: :request do
     response = JSON.parse(@response.body, symbolize_names: true)
 
     expect(response[:data][:createStreetArt][:id].to_i).to be_a(Integer)
+  end
+
+  it "favorites a street art post" do
+    expect(@street_art.favorite).to eq(false)
+
+    post "/graphql", params: { query: favorite_query(street_art_id: @street_art.id)}
+
+    response = JSON.parse(@response.body, symbolize_names: true)
+
+    expect(response[:data][:favoriteStreetArt][:id].to_i).to eq(@street_art.id)
+    expect(response[:data][:favoriteStreetArt][:favorite]).to eq(true)
   end
 
   def base_query(user_id:)
@@ -143,6 +155,20 @@ RSpec.describe "art requests", type: :request do
           imageUrls: "['url', 'url', 'url']"
         }) {
             id
+            }
+      }
+    GQL
+  end
+
+  def favorite_query(street_art_id:)
+    <<~GQL
+      mutation {
+        favoriteStreetArt( input: {
+          streetArtId: #{street_art_id}
+          favorite: true
+        }) {
+            id
+            favorite
             }
       }
     GQL
