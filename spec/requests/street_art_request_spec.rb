@@ -83,6 +83,17 @@ RSpec.describe "art requests", type: :request do
     expect(response[:data][:favoriteStreetArt][:favorite]).to eq(true)
   end
 
+  it "visits a street art post" do
+    expect(@street_art.visited).to eq(false)
+
+    post "/graphql", params: { query: visit_query(street_art_id: @street_art.id)}
+
+    response = JSON.parse(@response.body, symbolize_names: true)
+
+    expect(response[:data][:visitStreetArt][:id].to_i).to eq(@street_art.id)
+    expect(response[:data][:visitStreetArt][:visited]).to eq(true)
+  end
+
   def base_query(user_id:)
     <<~GQL
       mutation {
@@ -169,6 +180,20 @@ RSpec.describe "art requests", type: :request do
         }) {
             id
             favorite
+            }
+      }
+    GQL
+  end
+
+  def visit_query(street_art_id:)
+    <<~GQL
+      mutation {
+        visitStreetArt( input: {
+          streetArtId: #{street_art_id}
+          visited: true
+        }) {
+            id
+            visited
             }
       }
     GQL
