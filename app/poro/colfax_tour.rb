@@ -2,9 +2,9 @@ class ColfaxTour < Tour
   attr_reader :id, :name, :link
 
   def initialize
-    id = 1
-    name = "Colfax Tour"
-    link = navigation_link(colfax_coordinates)
+    @id = 1
+    @name = "Colfax Tour"
+    @link = navigation_link(colfax_coordinates)
   end
 
   def colfax_coordinates
