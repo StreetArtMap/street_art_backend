@@ -204,3 +204,16 @@ user.street_arts.create!({
   image_urls: "['/public/wolflady.png']",
   description: 'Wolf lady mural'
   })
+
+user.street_arts.create!({
+  latitude: '39.754832',
+  longitude: '-104.987198',
+  address: '2314 Broadway',
+  city: 'Denver',
+  state: 'CO',
+  zipcode: '80205',
+  image_urls: "['/public/denver_heart.png']",
+  description: 'Geometric heart mural',
+  artist_name: 'Pat Milbery',
+  instagram_handle: 'patmilbery'
+  })
