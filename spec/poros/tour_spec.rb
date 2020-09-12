@@ -19,7 +19,7 @@ describe Tour, type: :poro do
 
     expect(tour.id).to eq(1)
     expect(tour.name).to eq("Colfax Tour")
-    expect(tour.link).to be_a(String)
+    # expect(tour.link).to be_a(String)
   end
 
   it "can get rino tour data" do
@@ -90,27 +90,28 @@ describe Tour, type: :poro do
     expect(tour.rino_coordinates.length).to eq(4)
     expect(tour.id).to eq(2)
     expect(tour.name).to eq("RiNo Tour")
-    expect(tour.link).to be_a(String)
+    # expect(tour.link).to be_a(String)
   end
 
   it "can get broadway tour data" do
     user = FactoryBot.create(:user)
     user.street_arts.create!({
-      latitude: '39.740254',
-      longitude: '-104.966621',
-      address: '1717 E Colfax Ave',
+      latitude: '39.754832',
+      longitude: '-104.987198',
+      address: '2314 Broadway',
       city: 'Denver',
       state: 'CO',
-      zipcode: '80218',
-      image_urls: "['/public/boxing_nurse.png']",
-      description:'Nurse wearing boxing gloves.',
-      artist_name: 'Austin Zucchini-Fowler',
-      instagram_handle: 'austinzart'
+      zipcode: '80205',
+      image_urls: "['/public/denver_heart.png']",
+      description: 'Geometric heart mural',
+      artist_name: 'Pat Milbery',
+      instagram_handle: 'patmilbery'
       })
     tour = BroadwayTour.new
 
+    expect(tour.broadway_coordinates.length).to eq(1)
     expect(tour.id).to eq(3)
     expect(tour.name).to eq("Broadway Tour")
-    expect(tour.link).to be_a(String)
+    # expect(tour.link).to be_a(String)
   end
 end
