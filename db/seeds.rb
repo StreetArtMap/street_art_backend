@@ -1,6 +1,6 @@
 user = FactoryBot.create(:user)
 
-user.street_art.create!({
+user.street_arts.create!({
   latitude: '39.743083',
   longitude: '-104.972802',
   address: '1122 E 17th Ave',
@@ -13,7 +13,7 @@ user.street_art.create!({
   instagram_handle: 'detour303'
   })
 
-user.street_art.create!({
+user.street_arts.create!({
   latitude: '39.772892',
   longitude: '-104.968413',
   address: '3990 Franklin Street',
@@ -26,7 +26,7 @@ user.street_art.create!({
   instagram_handle: 'detour303'
   })
 
-user.street_art.create!({
+user.street_arts.create!({
   latitude: '39.740240',
   longitude: '-104.964179',
   address: '1919 Colfax Ave',
@@ -39,7 +39,7 @@ user.street_art.create!({
   instagram_handle: 'detour303'
   })
 
-user.street_art.create!({
+user.street_arts.create!({
   latitude: '39.740254',
   longitude: '-104.966621',
   address: '1717 E Colfax Ave',
@@ -52,7 +52,7 @@ user.street_art.create!({
   instagram_handle: 'austinzart'
   })
 
-user.street_art.create!({
+user.street_arts.create!({
   latitude: '39.730335',
   longitude: '-104.997068',
   address: '724 W 9th',
@@ -65,7 +65,7 @@ user.street_art.create!({
   instagram_handle: 'austinzart'
   })
 
-user.street_art.create!({
+user.street_arts.create!({
   latitude: '39.754113',
   longitude: '-104.987099',
   address: '1030 Park Avenue West',
@@ -79,7 +79,7 @@ user.street_art.create!({
   instagram_handle: 'jason_thielke'
   })
 
-user.street_art.create!({
+user.street_arts.create!({
   latitude: '39.779995',
   longitude: '-105.043884',
   address: '4582 Tennyson Street',
@@ -92,7 +92,7 @@ user.street_art.create!({
   instagram_handle: 'el_chan_guri'
   })
 
-user.street_art.create!({
+user.street_arts.create!({
   latitude: '39.773844',
   longitude: '-105.043855',
   address: '4170 Tennyson Street',
@@ -105,7 +105,7 @@ user.street_art.create!({
   instagram_handle: 'patrickkanemcgregor'
   })
 
-user.street_art.create!({
+user.street_arts.create!({
   latitude: '39.742397',
   longitude: '-105.031576',
   address: '1585 Julian Street',
@@ -118,7 +118,7 @@ user.street_art.create!({
   instagram_handle: 'patrickkanemcgregor'
   })
 
-user.street_art.create!({
+user.street_arts.create!({
   latitude: '39.741809',
   longitude: '-105.029868',
   address: '3253 West Conejos Place',
@@ -130,7 +130,7 @@ user.street_art.create!({
   instagram_handle: 'jerryrugg'
   })
 
-user.street_art.create!({
+user.street_arts.create!({
   latitude: '39.739773',
   longitude: '-104.960385',
   address: '2220 East Colfax Ave',
@@ -143,7 +143,7 @@ user.street_art.create!({
   instagram_handle: 'peptalks'
   })
 
-user.street_art.create!({
+user.street_arts.create!({
   latitude: '39.736899',
   longitude: '-104.947954',
   address: '1300 Adams Street',
@@ -155,4 +155,65 @@ user.street_art.create!({
   art_name: 'The birth of Helen and Clytemnestra',
   artist_name: 'Nick Napoletano',
   instagram_handle: 'napoletanoart'
+  })
+
+user.street_arts.create!({
+  latitude: '39.758005',
+  longitude: '-104.985765',
+  address: '2532 Larimer Street',
+  city: 'Denver',
+  state: 'CO',
+  zipcode: '80205',
+  image_urls: "['/public/botanicare.png']",
+  description:'Her with plants'
+  })
+
+user.street_arts.create!({
+  latitude: '39.765144',
+  longitude: '-104.979897',
+  address: '3196 Blake Street',
+  city: 'Denver',
+  state: 'CO',
+  zipcode: '80205',
+  image_urls: "['/public/pichi_and_avo.png']",
+  description: 'Hermes mural',
+  artist_name: 'PichiAvo',
+  instagram_handle: 'pichiavo'
+  })
+
+user.street_arts.create!({
+  latitude: '39.763562',
+  longitude: '-104.978627',
+  address: '3128 Larimer Street',
+  city: 'Denver',
+  state: 'CO',
+  zipcode: '80205',
+  image_urls: "['/public/snake.png']",
+  description: 'Snake and moon',
+  artist_name: 'Lauren Napolitano',
+  instagram_handle: 'peptalks'
+  })
+
+user.street_arts.create!({
+  latitude: '39.759987',
+  longitude: '-104.986479',
+  address: '2632 Blake Street',
+  city: 'Denver',
+  state: 'CO',
+  zipcode: '80205',
+  image_urls: "['/public/wolflady.png']",
+  description: 'Wolf lady mural'
+  })
+
+user.street_arts.create!({
+  latitude: '39.754832',
+  longitude: '-104.987198',
+  address: '2314 Broadway',
+  city: 'Denver',
+  state: 'CO',
+  zipcode: '80205',
+  image_urls: "['/public/denver_heart.png']",
+  description: 'Geometric heart mural',
+  artist_name: 'Pat Milbery',
+  instagram_handle: 'patmilbery'
   })
