@@ -1,5 +1,5 @@
 class ToursController < ApplicationController
   def index
-    require "pry";binding.pry
+    render json: TourSerializer.new([ColfaxTour.new, RinoTour.new, BroadwayTour.new]).info
   end
 end
