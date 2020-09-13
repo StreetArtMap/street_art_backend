@@ -1,6 +1,6 @@
 user = FactoryBot.create(:user)
 
-user.street_art.create!({
+user.street_arts.create!({
   latitude: '39.743083',
   longitude: '-104.972802',
   address: '1122 E 17th Ave',
@@ -13,7 +13,7 @@ user.street_art.create!({
   instagram_handle: 'detour303'
   })
 
-user.street_art.create!({
+user.street_arts.create!({
   latitude: '39.772892',
   longitude: '-104.968413',
   address: '3990 Franklin Street',
@@ -26,7 +26,7 @@ user.street_art.create!({
   instagram_handle: 'detour303'
   })
 
-user.street_art.create!({
+user.street_arts.create!({
   latitude: '39.740240',
   longitude: '-104.964179',
   address: '1919 Colfax Ave',
@@ -39,7 +39,7 @@ user.street_art.create!({
   instagram_handle: 'detour303'
   })
 
-user.street_art.create!({
+user.street_arts.create!({
   latitude: '39.740254',
   longitude: '-104.966621',
   address: '1717 E Colfax Ave',
@@ -52,7 +52,7 @@ user.street_art.create!({
   instagram_handle: 'austinzart'
   })
 
-user.street_art.create!({
+user.street_arts.create!({
   latitude: '39.730335',
   longitude: '-104.997068',
   address: '724 W 9th',
@@ -65,7 +65,7 @@ user.street_art.create!({
   instagram_handle: 'austinzart'
   })
 
-user.street_art.create!({
+user.street_arts.create!({
   latitude: '39.754113',
   longitude: '-104.987099',
   address: '1030 Park Avenue West',
@@ -79,7 +79,7 @@ user.street_art.create!({
   instagram_handle: 'jason_thielke'
   })
 
-user.street_art.create!({
+user.street_arts.create!({
   latitude: '39.779995',
   longitude: '-105.043884',
   address: '4582 Tennyson Street',
@@ -92,7 +92,7 @@ user.street_art.create!({
   instagram_handle: 'el_chan_guri'
   })
 
-user.street_art.create!({
+user.street_arts.create!({
   latitude: '39.773844',
   longitude: '-105.043855',
   address: '4170 Tennyson Street',
@@ -105,7 +105,7 @@ user.street_art.create!({
   instagram_handle: 'patrickkanemcgregor'
   })
 
-user.street_art.create!({
+user.street_arts.create!({
   latitude: '39.742397',
   longitude: '-105.031576',
   address: '1585 Julian Street',
@@ -118,7 +118,7 @@ user.street_art.create!({
   instagram_handle: 'patrickkanemcgregor'
   })
 
-user.street_art.create!({
+user.street_arts.create!({
   latitude: '39.741809',
   longitude: '-105.029868',
   address: '3253 West Conejos Place',
@@ -130,7 +130,7 @@ user.street_art.create!({
   instagram_handle: 'jerryrugg'
   })
 
-user.street_art.create!({
+user.street_arts.create!({
   latitude: '39.739773',
   longitude: '-104.960385',
   address: '2220 East Colfax Ave',
@@ -143,7 +143,7 @@ user.street_art.create!({
   instagram_handle: 'peptalks'
   })
 
-user.street_art.create!({
+user.street_arts.create!({
   latitude: '39.736899',
   longitude: '-104.947954',
   address: '1300 Adams Street',
