@@ -7,7 +7,7 @@ user.street_art.create!({
   city: 'Denver',
   state: 'CO',
   zipcode: '80218',
-  image_urls: '/public/isabella_thallas.png',
+  image_urls: "['https://res.cloudinary.com/ds6dxgvxo/image/upload/v1599966469/isabella_thallas_gyw8bo.png']",
   description:'This mural is helping families through tough times as the community mourns Isabella Thallas, who was senselessly gunned down last week.',
   artist_name: 'Thomas Evans',
   instagram_handle: 'detour303'
@@ -20,7 +20,7 @@ user.street_art.create!({
   city: 'Denver',
   state: 'CO',
   zipcode: '80205',
-  image_urls: "['/public/john_lewis.png']",
+  image_urls: "['https://res.cloudinary.com/ds6dxgvxo/image/upload/v1599966471/john_lewis_hfhvxy.png']",
   description:'Mr. #GoodTrouble , John Lewis, will always be a part of our lives because we wouldn’t be here without him and many others that stood stood up during the civil rights movement. Many of you are making that Good Trouble as I paint this now. RIP John Lewis',
   artist_name: 'Thomas Evans',
   instagram_handle: 'detour303'
@@ -33,7 +33,7 @@ user.street_art.create!({
   city: 'Denver',
   state: 'CO',
   zipcode: '80218',
-  image_urls: "['/public/george_floyd.png']",
+  image_urls: "['https://res.cloudinary.com/ds6dxgvxo/image/upload/v1599966449/george_floyd_c0oplj.png']",
   description:'Two black muralist (Myself and @hieroveiga ) coming together in Denver to let their art speak. Hoping to usher in the next generation of artists, and especially black artists, that will use their art to make change in society.',
   artist_name: 'Thomas Evans',
   instagram_handle: 'detour303'
@@ -46,7 +46,7 @@ user.street_art.create!({
   city: 'Denver',
   state: 'CO',
   zipcode: '80218',
-  image_urls: "['/public/boxing_nurse.png']",
+  image_urls: "['https://res.cloudinary.com/ds6dxgvxo/image/upload/v1599966468/boxing_nurse_thxrfa.png']",
   description:'Nurse wearing boxing gloves.',
   artist_name: 'Austin Zucchini-Fowler',
   instagram_handle: 'austinzart'
@@ -59,7 +59,7 @@ user.street_art.create!({
   city: 'Denver',
   state: 'CO',
   zipcode: '80204',
-  image_urls: "['/public/veterinarian.png']",
+  image_urls: "['https://res.cloudinary.com/ds6dxgvxo/image/upload/v1599966486/veterinarian_faqgbc.png']",
   description:'This one goes out to all the veterinarian’s! Thank you for always taking care of our animals and especially for staying open and working through the challenges of the pandemic.',
   artist_name: 'Austin Zucchini-Fowler',
   instagram_handle: 'austinzart'
@@ -72,7 +72,7 @@ user.street_art.create!({
   city: 'Denver',
   state: 'CO',
   zipcode: '80205',
-  image_urls: "['/public/kissing.png','/public/kissing2.png']",
+  image_urls: "['https://res.cloudinary.com/ds6dxgvxo/image/upload/v1599966484/kissing_b1ezfl.png','https://res.cloudinary.com/ds6dxgvxo/image/upload/v1599966473/kissing2_bu3zef.png']",
   description:'Couple kissing.',
   art_name: 'Kim & Jesse',
   artist_name: 'Jason Thielke',
@@ -86,7 +86,7 @@ user.street_art.create!({
   city: 'Denver',
   state: 'CO',
   zipcode: '80212',
-  image_urls: "['/public/pachamama.png','/public/pachamama2.png']",
+  image_urls: "['https://res.cloudinary.com/ds6dxgvxo/image/upload/v1599966488/pachamama_b1jbck.png','https://res.cloudinary.com/ds6dxgvxo/image/upload/v1599966486/pachamama2_gqmtov.png']",
   description:'La Pachamama is responding. Time to reflect on how we have been living as a society. How can we begin to bring back balance and live harmonious with nature?',
   artist_name: 'Luis Valle',
   instagram_handle: 'el_chan_guri'
@@ -99,7 +99,7 @@ user.street_art.create!({
   city: 'Denver',
   state: 'CO',
   zipcode: '80212',
-  image_urls: "['/public/butterfly.png']",
+  image_urls: "['https://res.cloudinary.com/ds6dxgvxo/image/upload/v1599966446/butterfly_q4qkm8.png']",
   description:'Butterfly wings made of flowers, with a bulldog.',
   artist_name: 'Patrick Kane McGregor',
   instagram_handle: 'patrickkanemcgregor'
@@ -112,7 +112,7 @@ user.street_art.create!({
   city: 'Denver',
   state: 'CO',
   zipcode: '80204',
-  image_urls: "['/public/bulldog_portrait.png']",
+  image_urls: "['https://res.cloudinary.com/ds6dxgvxo/image/upload/v1599966455/bulldog_portrait_pk5mzl.png']",
   description:'Portrait of a bulldog.',
   artist_name: 'Patrick Kane McGregor',
   instagram_handle: 'patrickkanemcgregor'
@@ -125,7 +125,7 @@ user.street_art.create!({
   city: 'Denver',
   state: 'CO',
   zipcode: '80204',
-  image_urls: "['/public/sheep_fish.png']",
+  image_urls: "['https://res.cloudinary.com/ds6dxgvxo/image/upload/v1599966480/sheep_fish_jlyrjy.png']",
   description:'sheep + fish',
   instagram_handle: 'jerryrugg'
   })
@@ -137,7 +137,7 @@ user.street_art.create!({
   city: 'Denver',
   state: 'CO',
   zipcode: '80206',
-  image_urls: "['/public/hands.png', '/public/hand.png']",
+  image_urls: "['https://res.cloudinary.com/ds6dxgvxo/image/upload/v1599966458/hand_ykunr9.png', 'https://res.cloudinary.com/ds6dxgvxo/image/upload/v1599966446/hands_cjkftm.png']",
   description:'Honoring missed connections',
   artist_name: 'Lauren Napolitano',
   instagram_handle: 'peptalks'
@@ -150,9 +150,70 @@ user.street_art.create!({
   city: 'Denver',
   state: 'CO',
   zipcode: '80206',
-  image_urls: "['/public/helen.png', '/public/helen2.png', '/public/helen3.png']",
+  image_urls: "['https://res.cloudinary.com/ds6dxgvxo/image/upload/v1599966454/helen_z89ri5.png', 'https://res.cloudinary.com/ds6dxgvxo/image/upload/v1599966472/helen2_ucfopy.png', 'https://res.cloudinary.com/ds6dxgvxo/image/upload/v1599966460/helen3_s4gifq.png']",
   description:'With this building I wanted to create a chronological Greek narrative. The piece starts with an egg hatching, hinting at the myth of Leda and the Swan. The mural ends with an image of Helen of Troy and her sister.',
   art_name: 'The birth of Helen and Clytemnestra',
   artist_name: 'Nick Napoletano',
   instagram_handle: 'napoletanoart'
+  })
+
+user.street_arts.create!({
+  latitude: '39.758005',
+  longitude: '-104.985765',
+  address: '2532 Larimer Street',
+  city: 'Denver',
+  state: 'CO',
+  zipcode: '80205',
+  image_urls: "['https://res.cloudinary.com/ds6dxgvxo/image/upload/v1599966448/botanicare_sjhv4t.png']",
+  description:'Her with plants'
+  })
+
+user.street_arts.create!({
+  latitude: '39.765144',
+  longitude: '-104.979897',
+  address: '3196 Blake Street',
+  city: 'Denver',
+  state: 'CO',
+  zipcode: '80205',
+  image_urls: "['https://res.cloudinary.com/ds6dxgvxo/image/upload/v1599966475/pichi_and_avo_riadf3.png']",
+  description: 'Hermes mural',
+  artist_name: 'PichiAvo',
+  instagram_handle: 'pichiavo'
+  })
+
+user.street_arts.create!({
+  latitude: '39.763562',
+  longitude: '-104.978627',
+  address: '3128 Larimer Street',
+  city: 'Denver',
+  state: 'CO',
+  zipcode: '80205',
+  image_urls: "['https://res.cloudinary.com/ds6dxgvxo/image/upload/v1599966483/snake_o2ossr.png']",
+  description: 'Snake and moon',
+  artist_name: 'Lauren Napolitano',
+  instagram_handle: 'peptalks'
+  })
+
+user.street_arts.create!({
+  latitude: '39.759987',
+  longitude: '-104.986479',
+  address: '2632 Blake Street',
+  city: 'Denver',
+  state: 'CO',
+  zipcode: '80205',
+  image_urls: "['https://res.cloudinary.com/ds6dxgvxo/image/upload/v1599966483/wolflady_wey344.png']",
+  description: 'Wolf lady mural'
+  })
+
+user.street_arts.create!({
+  latitude: '39.754832',
+  longitude: '-104.987198',
+  address: '2314 Broadway',
+  city: 'Denver',
+  state: 'CO',
+  zipcode: '80205',
+  image_urls: "['https://res.cloudinary.com/ds6dxgvxo/image/upload/v1599966436/denver_heart_bei3jf.png']",
+  description: 'Geometric heart mural',
+  artist_name: 'Pat Milbery',
+  instagram_handle: 'patmilbery'
   })
