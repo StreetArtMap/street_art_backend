@@ -99,7 +99,7 @@ user.street_arts.create!({
   city: "Denver",
   state: "CO",
   zipcode: "80212",
-  image_urls: ["https://res.cloudinary.com/ds6dxgvxo/image/upload/v1599966446/butterfly_q4qkm8"],
+  image_urls: ["https://res.cloudinary.com/ds6dxgvxo/image/upload/v1600033864/IMG_20200913_145045__01_zmgmn8.jpg", "https://res.cloudinary.com/ds6dxgvxo/image/upload/v1600033861/IMG_20200913_145022__01_xefvie.jpg", "https://res.cloudinary.com/ds6dxgvxo/image/upload/v1599966446/butterfly_q4qkm8"],
   description:"Butterfly wings made of flowers, with a bulldog.",
   artist_name: "Patrick Kane McGregor",
   instagram_handle: "patrickkanemcgregor"
@@ -217,3 +217,66 @@ user.street_arts.create!({
   artist_name: "Pat Milbery",
   instagram_handle: "patmilbery"
   })
+
+user.street_arts.create!({
+  latitude: "39.7694445",
+  longitude: "-105.0448389",
+  address: "4499 W 38th Ave #101",
+  city: "Denver",
+  state: "CO",
+  zipcode: "80212",
+  image_urls: ["https://res.cloudinary.com/ds6dxgvxo/image/upload/v1600033842/IMG_20200913_142815__01__01_p3gyrj.jpg", "https://res.cloudinary.com/ds6dxgvxo/image/upload/v1600033848/IMG_20200913_142803__01_l9cle5.jpg"],
+  description: "Beautiful colorful mural",
+  artist_name: "Joaquin Gonzales"
+})
+
+user.street_arts.create!({
+  latitude: "39.7621855",
+  longitude: "-105.0351840",
+  address: "3621 W 32nd Ave",
+  city: "Denver",
+  state: "CO",
+  zipcode: "80211",
+  image_urls: [
+    "https://res.cloudinary.com/ds6dxgvxo/image/upload/v1600033847/IMG_20200913_140517__01_wepikl.jpg",
+    "https://res.cloudinary.com/ds6dxgvxo/image/upload/v1600033848/IMG_20200913_140533__01_hgsxjx.jpg",
+    "https://res.cloudinary.com/ds6dxgvxo/image/upload/v1600033848/IMG_20200913_140546__01_mo1ctk.jpg",
+  ],
+  description: "Space girl crafting",
+  artist_name: "Chad Bolsinger",
+  instagram_handle: "explore/tags/chadbolsinger/?hl=en"
+})
+
+user.street_arts.create!({
+  latitude: "39.7768069",
+  longitude: "-105.0428256",
+  address: "4301 W 44th Ave",
+  city: "Denver",
+  state: "CO",
+  zipcode: "80212",
+  image_urls: [
+    "https://res.cloudinary.com/ds6dxgvxo/image/upload/v1600033848/IMG_20200913_150356__01_b8dqdw.jpg",
+    "https://res.cloudinary.com/ds6dxgvxo/image/upload/v1600033853/IMG_20200913_150344__01__01_yxxovh.jpg",
+  ],
+  description:
+    "¡Al Oeste, Vamos! It is a not so common view of Long's Peak viewed from the north and the mighty saguaro cactus",
+  artist_name: "Max Coleman",
+  instagram_handle: "oak_bloak"
+})
+
+user.street_arts.create!({
+  latitude: "39.7695041",
+  longitude: "-105.0452382",
+  address: "4501 W 38th Ave",
+  city: "Denver",
+  state: "CO",
+  zipcode: "80212",
+  image_urls: [
+    "https://res.cloudinary.com/ds6dxgvxo/image/upload/v1600033857/IMG_20200913_142923__01_lw0weo.jpg",
+    "https://res.cloudinary.com/ds6dxgvxo/image/upload/v1600033857/IMG_20200913_142927__01_gojbiu.jpg",
+    "https://res.cloudinary.com/ds6dxgvxo/image/upload/v1600033857/IMG_20200913_142938__01_sa8f4g.jpg",
+    "https://res.cloudinary.com/ds6dxgvxo/image/upload/v1600033857/IMG_20200913_143009__01_ht27df.jpg",
+    "https://res.cloudinary.com/ds6dxgvxo/image/upload/v1600033864/IMG_20200913_142917__01_qatesr.jpg",
+  ],
+  instagram_handle: "mpek36"
+})
