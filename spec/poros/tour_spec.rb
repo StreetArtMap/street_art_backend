@@ -90,7 +90,7 @@ describe Tour, type: :poro do
     expect(tour.rino_coordinates.length).to eq(4)
     expect(tour.id).to eq(2)
     expect(tour.name).to eq("RiNo Tour")
-    # expect(tour.link).to be_a(String)
+    expect(tour.link).to be_a(String)
   end
 
   it "can get broadway tour data" do
@@ -112,6 +112,6 @@ describe Tour, type: :poro do
     expect(tour.broadway_coordinates.length).to eq(1)
     expect(tour.id).to eq(3)
     expect(tour.name).to eq("Broadway Tour")
-    # expect(tour.link).to be_a(String)
+    expect(tour.link).to be_a(String)
   end
 end
