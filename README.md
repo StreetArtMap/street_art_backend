@@ -44,7 +44,7 @@ Running in production:
 
 Sample response:
 
-![streetArts](public/street_arts_response)
+![streetArts](/public/street_arts_response.png)
 
 #### tours
 
@@ -58,7 +58,7 @@ Sample response:
 
 Sample response:
 
-![tours](public/tours_response)
+![tours](/public/tours_response.png)
 
 #### users
 
@@ -73,7 +73,7 @@ Sample response:
 
 Sample response:
 
-![users](public/users_response)
+![users](/public/users_response.png)
 
 ## Mutations
 
@@ -105,7 +105,7 @@ Sample response:
 
 Sample response:
 
-![createStreetArt](public/create_street_art)
+![createStreetArt](/public/create_street_art.png)
 
 #### favoriteStreetArt
 
@@ -123,7 +123,7 @@ Sample response:
 
 Sample response:
 
-![favorite](public/favorite_response)
+![favorite](/public/favorite_response.png)
 
 #### visitStreetArt
 
@@ -142,7 +142,7 @@ Sample response:
 
 Sample response:
 
-![visit](public/visit_response)
+![visit](/public/visit_response.png)
 
 ## Tech Stack
 
