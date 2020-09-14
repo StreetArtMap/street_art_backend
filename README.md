@@ -53,7 +53,7 @@ Running in production:
 
 `POST 'https://streetwalker-backend/graphql'`
 
-#### Queries <a name="queries"></a>
+### Queries <a name="queries"></a>
 
 **streetArts**
 
@@ -97,7 +97,7 @@ Sample response:
 
 ![users](/public/users_response.png)
 
-#### Mutations <a name="mutations"></a>
+### Mutations <a name="mutations"></a>
 
 **createStreetArt**
 
@@ -214,25 +214,25 @@ Sample response:
 
 ## Contributors <a name="team"></a>
 
-#### Backend Team
+  ### Backend Team
 
-  [Stella Bonnie](https://github.com/stellakunzang)
+   [Stella Bonnie](https://github.com/stellakunzang)
 
-  [Michael Gallup](https://github.com/Gallup93)
+   [Michael Gallup](https://github.com/Gallup93)
 
-  [Jesse Gietzen](https://github.com/elguapogordo)
+   [Jesse Gietzen](https://github.com/elguapogordo)
 
-#### Frontend Team
+  ### Frontend Team
 
-  [Carlos Flores](https://github.com/carflor)
+   [Carlos Flores](https://github.com/carflor)
 
-  [Edita Ignot](https://github.com/edignot)
+   [Edita Ignot](https://github.com/edignot)
 
-#### Project Managers
+  ### Project Managers
 
-  [Megan McMahon](https://github.com/memcmahon)
+   [Megan McMahon](https://github.com/memcmahon)
 
-  [Robbie Jaeger](https://github.com/robbiejaeger)
+   [Robbie Jaeger](https://github.com/robbiejaeger)
 
 ## Future Iterations <a name="future"></a>
 
