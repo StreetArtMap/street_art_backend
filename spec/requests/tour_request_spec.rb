@@ -99,12 +99,12 @@ RSpec.describe "tour requests", type: :request do
     User.delete_all
   end
 
-  xit "returns all tours" do
-    post "/graphql", params: {query: "{tours {allTours}}"}
+  it "returns all tours" do
+    get "/tours"
 
     response = JSON.parse(@response.body, symbolize_names: true)
 
     expect(response[:data]).to be_a(Hash)
-    expect(response[:allTours]).to be_a(Array)
+    expect(response[:data][:allTours]).to be_a(Array)
   end
 end
