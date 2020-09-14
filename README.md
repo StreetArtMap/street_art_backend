@@ -31,7 +31,7 @@ As you can see, the database is very simple. In the future, if we were to build 
 
 Though we had intended to build our entire API service in GraphQL, we ended up creating one RESTful route to satisfy this iteration's need for tours NOT stored in the database.
 
-#### REST Endpoint
+### REST Endpoint
 
 *in production*
 `GET 'https://streetwalker-backend/tours'`
@@ -43,7 +43,7 @@ Sample response:
 
 ![tours](/public/tours_response.png)
 
-#### GraphQL Endpoints
+### GraphQL Endpoints
 
 Running on local server:
 
@@ -53,9 +53,9 @@ Running in production:
 
 `POST 'https://streetwalker-backend/graphql'`
 
-## Queries <a name="queries"></a>
+#### Queries <a name="queries"></a>
 
-#### streetArts
+**streetArts**
 
 *returns all street art in the database*
 
@@ -77,7 +77,7 @@ Sample response:
 
 ![streetArts](/public/street_arts_response.png)
 
-#### users
+**users**
 
 *returns all users*
 
@@ -97,9 +97,9 @@ Sample response:
 
 ![users](/public/users_response.png)
 
-## Mutations <a name="mutations"></a>
+#### Mutations <a name="mutations"></a>
 
-#### createStreetArt
+**createStreetArt**
 
 *Adds a street art object to the database*
 
@@ -149,7 +149,7 @@ Sample response:
 
 ![createStreetArt](/public/create_street_art.png)
 
-#### favoriteStreetArt
+**favoriteStreetArt**
 
 *Toggles favorite status for street art between true and false*
 
@@ -175,7 +175,7 @@ Sample response:
 
 ![favorite](/public/favorite_response.png)
 
-#### visitStreetArt
+**visitStreetArt**
 
 *Toggles visited status for street art between true and false*
 
@@ -254,7 +254,7 @@ Though we met our MVP for this project, we still have a long list of features we
 
 - Users can mark when a piece of art is no longer present at that location and submit updated images if new art is there. Art that is no longer visible will go to an "archives" page.
 
-- OAuth with Instagram so users can share posts directly from instagram. 
+- OAuth with Instagram so users can share posts directly from instagram.
 
 ## Development Implementation Instructions <a name="implementation"></a>
 
