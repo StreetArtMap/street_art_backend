@@ -19,7 +19,7 @@ describe Tour, type: :poro do
 
     expect(tour.id).to eq(1)
     expect(tour.name).to eq("Colfax Tour")
-    # expect(tour.link).to be_a(String)
+    expect(tour.link).to be_a(String)
   end
 
   it "can get rino tour data" do
@@ -93,25 +93,37 @@ describe Tour, type: :poro do
     expect(tour.link).to be_a(String)
   end
 
-  it "can get broadway tour data" do
+  it "can get santa fe tour data" do
     user = FactoryBot.create(:user)
     user.street_arts.create!({
-      latitude: '39.754832',
-      longitude: '-104.987198',
-      address: '2314 Broadway',
+      latitude: '39.735562',
+      longitude: '-104.998610',
+      address: '1210 Santa Fe Drive',
       city: 'Denver',
       state: 'CO',
-      zipcode: '80205',
-      image_urls: "['/public/denver_heart.png']",
-      description: 'Geometric heart mural',
-      artist_name: 'Pat Milbery',
-      instagram_handle: 'patmilbery'
+      zipcode: '80204',
+      image_urls: ["https://res.cloudinary.com/ds6dxgvxo/image/upload/v1600121456/Screen_Shot_2020-09-14_at_4.10.48_PM_qjcdiy.png"],
+      description: 'Aztec royalty'
       })
-    tour = BroadwayTour.new
 
-    expect(tour.broadway_coordinates.length).to eq(1)
+    user.street_arts.create!({
+      latitude: '39.731741',
+      longitude: '-104.998976',
+      address: '965 Santa Fe Drive',
+      city: 'Denver',
+      state: 'CO',
+      zipcode: '80204',
+      image_urls: ["https://res.cloudinary.com/ds6dxgvxo/image/upload/v1600121858/Screen_Shot_2020-09-14_at_4.17.10_PM_metdcc.png"],
+      description: 'Skeleton playing guitar',
+      artist_name: 'Jaime Molina',
+      instagram_handle: 'cuttyup'
+      })
+
+    tour = SantaFeTour.new
+
+    expect(tour.santafe_coordinates.length).to eq(2)
     expect(tour.id).to eq(3)
-    expect(tour.name).to eq("Broadway Tour")
+    expect(tour.name).to eq("Santa Fe Art District Tour")
     expect(tour.link).to be_a(String)
   end
 end
