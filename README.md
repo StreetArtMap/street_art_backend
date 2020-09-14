@@ -6,11 +6,143 @@ This application is a Ruby on Rails API service, utilizing GraphQL to create use
 
 [Production link](https://streetwalker-backend.herokuapp.com/)
 
+## Contributors
+
+[Stella Bonnie](https://github.com/stellakunzang)
+
+[Michael Gallup](https://github.com/Gallup93)
+
+[Jesse Gietzen](https://github.com/elguapogordo)
+
 ## Schema
 
 ![Schema](/public/schema.png)
 
 ## Endpoints
+
+Running on local server:
+
+`POST localhost:3000/graphql`
+
+Running in production:
+
+`POST streetwalker-backend/graphql`
+
+## Queries
+
+#### streetArts
+
+*returns all street art in the database*
+
+  `query {
+     streetArts {
+         id
+         latitude
+         longitude
+     }
+  }`
+
+Sample response:
+
+![streetArts](public/street_arts_response)
+
+#### tours
+
+*returns all street art tours*
+
+  `query {
+     tours {
+         allTours
+     }
+  }`
+
+Sample response:
+
+![tours](public/tours_response)
+
+#### users
+
+*returns all users*
+
+  `query {
+     users {
+         id
+         username
+     }
+  }`
+
+Sample response:
+
+![users](public/users_response)
+
+## Mutations
+
+#### createStreetArt
+
+*Adds a street art object to the database*
+
+  `mutation {
+        createStreetArt( input: {
+          userId: 2
+          latitude: "42.287365"
+          longitude: "-89.064301"
+          address: "Rock River Bike Path"
+          city: "Rockford"
+          state: "IL"
+          zipcode: "61107"
+          description: "Symbol is distracting from a distance yet overwhelming up-close. It stands forty-seven feet tall with a weight of thirty tons"
+          artistName: "Alexander Liberman"
+          artName: "Symbol"
+          imageUrls: "['https://townsquare.media/site/721/files/2016/02/12714350_10207010501954253_1570886039_n.jpg?w=980&q=75']"
+        }) {
+            id
+            latitude
+            longitude
+            city
+            artName
+            }
+      }`
+
+Sample response:
+
+![createStreetArt](public/create_street_art)
+
+#### favoriteStreetArt
+
+*Toggles favorite status for street art between true and false*
+
+  `mutation {
+       favoriteStreetArt( input: {
+         streetArtId: 2
+         favorite: true
+       }) {
+           id
+           favorite
+           }
+     }`
+
+Sample response:
+
+![favorite](public/favorite_response)
+
+#### visitStreetArt
+
+*Toggles visited status for street art between true and false*
+
+  `mutation {
+       visitStreetArt( input: {
+         streetArtId: 2
+         visited: true
+       }) {
+           id
+           favorite
+           visited
+           }
+       }`
+
+Sample response:
+
+![visit](public/visit_response)
 
 ## Tech Stack
 
@@ -18,6 +150,8 @@ This application is a Ruby on Rails API service, utilizing GraphQL to create use
 - Ruby 2.6.3
 - PostgreSQL
 - GraphQL
+- Heroku
+- TravisCI
 
 ## Development Implementation Instructions
 
@@ -58,4 +192,4 @@ Then run the three `db` commands above.
 
 If the `db:seed` command works, there is no return value. Pay attention to what comes back because you may not realize that your seeding has failed. You can track down errors in the `db/seeds` file.
 
-If the API key is not found, that is likely an error related to figaro. Please see the link above for support troubleshooting. 
+If the API key is not found, that is likely an error related to figaro. Please see the link above for support troubleshooting.
