@@ -10,8 +10,10 @@ class TourUrl
     @url_c = "!3e2?hl=en&authuser=0"
   end
 
+  private
+
   def create_url
-    x = @url_a + formatted_coords + @center + @url_b + destinations + @url_c
+    @url_a + formatted_coords + @center + @url_b + destinations + @url_c
   end
 
   def find_center
