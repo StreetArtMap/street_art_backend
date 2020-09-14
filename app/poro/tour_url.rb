@@ -10,11 +10,11 @@ class TourUrl
     @url_c = "!3e2?hl=en&authuser=0"
   end
 
-  private
-
   def create_url
     @url_a + formatted_coords + @center + @url_b + destinations + @url_c
   end
+
+  private
 
   def find_center
     center = Hash.new { |h, k| h[k] = [] }
