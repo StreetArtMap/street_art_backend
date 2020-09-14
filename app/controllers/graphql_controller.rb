@@ -13,11 +13,7 @@ class GraphqlController < ApplicationController
       # current_user: current_user,
     }
     result = StreetArtWalkBeSchema.execute(query, variables: variables, context: context, operation_name: operation_name)
-    if result.to_h["data"].keys[0] == "tours"
-      redirect_to "/tours"
-    else
-      render json: result
-    end
+    render json: result
   rescue => e
     raise e unless Rails.env.development?
     handle_error_in_development e
