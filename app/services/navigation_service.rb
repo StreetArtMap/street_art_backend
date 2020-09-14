@@ -1,4 +1,5 @@
 class NavigationService
   def get_tour(coordinates)
-  end 
+    TourUrl.new(coordinates).create_url
+  end
 end
