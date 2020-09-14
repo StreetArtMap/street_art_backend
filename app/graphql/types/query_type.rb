@@ -16,11 +16,5 @@ module Types
     def street_arts
       StreetArt.all
     end
-
-    #routes
-    field :tours, [Types::TourType], null: true
-
-    def tours
-    end
   end
 end
