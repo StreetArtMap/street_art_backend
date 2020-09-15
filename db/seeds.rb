@@ -472,3 +472,16 @@ user.street_arts.create!({
   image_urls: ["https://res.cloudinary.com/ds6dxgvxo/image/upload/v1600127572/Screen_Shot_2020-09-14_at_5.52.03_PM_shnppp.png"],
   description: "Colorful triangles"
   })
+
+user.street_arts.create!({
+  latitude: "39.761176",
+  longitude: "-104.981822",
+  address: "2862 Larimer St.",
+  city: "Denver",
+  state: "CO",
+  zipcode: "80205",
+  image_urls: ["https://res.cloudinary.com/ds6dxgvxo/image/upload/v1600128276/Screen_Shot_2020-09-14_at_6.04.25_PM_xkivio.png"],
+  description: "Blue buffalo with yellow background and red sun",
+  artist_name: "Max Coleman",
+  instagram_handle: "oak_bloak"
+})
