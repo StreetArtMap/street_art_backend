@@ -250,8 +250,6 @@ Though we met our MVP for this project, we still have a long list of features we
 
 - Tours exist for artists with a certain number of street art locations in the database.
 
-- Pins on map display a different color if they have been favorited or visited by the user. This color/icon corresponds to the favorite/visit button.
-
 -  If a user wants to add images for a piece of artwork that already exists in the database, they can add images to the existing entry.
 
 - Users can mark if an address is invalid and suggest an update.
