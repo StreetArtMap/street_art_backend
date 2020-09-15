@@ -11,5 +11,6 @@ class ColfaxTour < Tour
     latitudes = StreetArt.where('address ILIKE ?', '%Colfax%').pluck(:latitude)
     longitudes = StreetArt.where('address ILIKE ?', '%Colfax%').pluck(:longitude)
     coordinates = latitudes.zip(longitudes)
+    arrange_coordinates_by_latitude(coordinates)
   end
 end
