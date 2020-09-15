@@ -12,6 +12,6 @@ class RinoTour < Tour
     latitudes = search_params.pluck(:latitude)
     longitudes = search_params.pluck(:longitude)
     coordinates = latitudes.zip(longitudes)
-    arrange_coordinates(coordinates)
+    arrange_coordinates_by_longitude(coordinates)
   end
 end
