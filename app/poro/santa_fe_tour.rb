@@ -8,9 +8,10 @@ class SantaFeTour < Tour
   end
 
   def santafe_coordinates
-    search_params = StreetArt.where('latitude >= ? AND latitude <= ? AND longitude <= ? AND longitude >= ?', '39.716465', '39.737118', '-105.002667', '-104.996133' )
+    search_params = StreetArt.where('latitude >= ? AND latitude <= ? AND longitude <= ? AND longitude >= ?', '39.716465', '39.737118', '-105.002667', '-104.996133')
     latitudes = search_params.pluck(:latitude)
     longitudes = search_params.pluck(:longitude)
     coordinates = latitudes.zip(longitudes)
+    arrange_coordinates(coordinates)
   end
 end
