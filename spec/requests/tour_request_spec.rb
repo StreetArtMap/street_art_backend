@@ -92,6 +92,30 @@ RSpec.describe "tour requests", type: :request do
       artist_name: 'Pat Milbery',
       instagram_handle: 'patmilbery'
       })
+
+    user.street_arts.create!({
+      latitude: '39.735562',
+      longitude: '-104.998610',
+      address: '1210 Santa Fe Drive',
+      city: 'Denver',
+      state: 'CO',
+      zipcode: '80204',
+      image_urls: ["https://res.cloudinary.com/ds6dxgvxo/image/upload/v1600121456/Screen_Shot_2020-09-14_at_4.10.48_PM_qjcdiy.png"],
+      description: 'Aztec royalty'
+      })
+
+    user.street_arts.create!({
+      latitude: '39.731741',
+      longitude: '-104.998976',
+      address: '965 Santa Fe Drive',
+      city: 'Denver',
+      state: 'CO',
+      zipcode: '80204',
+      image_urls: ["https://res.cloudinary.com/ds6dxgvxo/image/upload/v1600121858/Screen_Shot_2020-09-14_at_4.17.10_PM_metdcc.png"],
+      description: 'Skeleton playing guitar',
+      artist_name: 'Jaime Molina',
+      instagram_handle: 'cuttyup'
+      })
   end
 
   after(:context) do

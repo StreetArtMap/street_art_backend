@@ -280,3 +280,208 @@ user.street_arts.create!({
   ],
   instagram_handle: "mpek36"
 })
+
+user.street_arts.create!({
+  latitude: "39.735562",
+  longitude: "-104.998610",
+  address: "1210 Santa Fe Drive",
+  city: "Denver",
+  state: "CO",
+  zipcode: "80204",
+  image_urls: ["https://res.cloudinary.com/ds6dxgvxo/image/upload/v1600121456/Screen_Shot_2020-09-14_at_4.10.48_PM_qjcdiy.png"],
+  description: "Aztec royalty"
+  })
+
+user.street_arts.create!({
+  latitude: "39.731741",
+  longitude: "-104.998976",
+  address: "965 Santa Fe Drive",
+  city: "Denver",
+  state: "CO",
+  zipcode: "80204",
+  image_urls: ["https://res.cloudinary.com/ds6dxgvxo/image/upload/v1600121858/Screen_Shot_2020-09-14_at_4.17.10_PM_metdcc.png"],
+  description: "Skeleton playing guitar",
+  artist_name: "Jaime Molina",
+  instagram_handle: "cuttyup"
+  })
+
+user.street_arts.create!({
+  latitude: "39.730016",
+  longitude: "-104.997998",
+  address: "855 Inca Street",
+  city: "Denver",
+  state: "CO",
+  zipcode: "80204",
+  image_urls: ["https://res.cloudinary.com/ds6dxgvxo/image/upload/v1600124537/Screen_Shot_2020-09-14_at_5.01.58_PM_x8the2.png"],
+  description: "House getting abducted by aliens."
+  })
+
+user.street_arts.create!({
+  latitude: "39.730016",
+  longitude: "-104.997998",
+  address: "855 Inca Street",
+  city: "Denver",
+  state: "CO",
+  zipcode: "80204",
+  image_urls: ["https://res.cloudinary.com/ds6dxgvxo/image/upload/v1600124630/Screen_Shot_2020-09-14_at_5.03.43_PM_gwv9e9.png"],
+  description: "Colorful mural with fangs"
+  })
+
+user.street_arts.create!({
+  latitude: "39.727108",
+  longitude: "-104.998489",
+  address: "695 Santa Fe Drive",
+  city: "Denver",
+  state: "CO",
+  zipcode: "80204",
+  image_urls: ["https://res.cloudinary.com/ds6dxgvxo/image/upload/v1600124735/Screen_Shot_2020-09-14_at_5.05.28_PM_mhepcn.png"],
+  description: "Pyramids and stuff"
+  })
+
+user.street_arts.create!({
+  latitude: "39.727704",
+  longitude: "-104.998547",
+  address: "718 Santa Fe",
+  city: "Denver",
+  state: "CO",
+  zipcode: "80204",
+  image_urls: ["https://res.cloudinary.com/ds6dxgvxo/image/upload/v1600124901/Screen_Shot_2020-09-14_at_5.08.15_PM_rhefwv.png"],
+  description: "Denver city mural",
+  artist_name: "Pat Milbery",
+  instagram_handle: "patmilbery"
+  })
+
+user.street_arts.create!({
+  latitude: "39.730379",
+  longitude: "-104.998061",
+  address: "800 West 9th Ave",
+  city: "Denver",
+  state: "CO",
+  zipcode: "80204",
+  image_urls: ["https://res.cloudinary.com/ds6dxgvxo/image/upload/v1600125428/Screen_Shot_2020-09-14_at_5.16.58_PM_q3nqka.png"],
+  description: "Beautiful blue gorilla",
+  artist_name: "Bimmer Torres",
+  instagram_handle: "_youngbeam"
+  })
+
+user.street_arts.create!({
+  latitude: "39.759272",
+  longitude: "-104.984868",
+  address: "2631 Larimer St.",
+  city: "Denver",
+  state: "CO",
+  zipcode: "80205",
+  image_urls: ["https://res.cloudinary.com/ds6dxgvxo/image/upload/v1600125712/Screen_Shot_2020-09-14_at_5.21.37_PM_bpxzrh.png", "https://res.cloudinary.com/ds6dxgvxo/image/upload/v1600125732/Screen_Shot_2020-09-14_at_5.22.06_PM_i48rta.png"],
+  description: "Power and equality",
+  artist_name: "Shephard Fairey"
+  })
+
+user.street_arts.create!({
+  latitude: "39.759981",
+  longitude: "-104.984502",
+  address: "2700 Walnut St.",
+  city: "Denver",
+  state: "CO",
+  zipcode: "80205",
+  image_urls: ["https://res.cloudinary.com/ds6dxgvxo/image/upload/v1600126006/Screen_Shot_2020-09-14_at_5.25.34_PM_f5wzgw.png", "https://res.cloudinary.com/ds6dxgvxo/image/upload/v1600126012/Screen_Shot_2020-09-14_at_5.25.48_PM_zdnfvg.png"],
+  description: "Pink and yellow graphic mural"
+  })
+
+user.street_arts.create!({
+  latitude: "39.771405",
+  longitude: "-104.970546",
+  address: "7654 Walnut St.",
+  city: "Denver",
+  state: "CO",
+  zipcode: "80205",
+  image_urls: ["https://res.cloudinary.com/ds6dxgvxo/image/upload/v1600126127/Screen_Shot_2020-09-14_at_5.28.39_PM_svcnav.png"],
+  description: "Rainbow eyeballs mural",
+  artist_name: "Vyalon"
+  })
+
+user.street_arts.create!({
+  latitude: "39.759663",
+  longitude: "-104.984536",
+  address: "1330 27th St.",
+  city: "Denver",
+  state: "CO",
+  zipcode: "80205",
+  image_urls: ["https://res.cloudinary.com/ds6dxgvxo/image/upload/v1600126247/Screen_Shot_2020-09-14_at_5.30.39_PM_xudzgv.png"],
+  description: "Nina Simone",
+  artist_name: "Thomas Evans",
+  instagram_handle: "detour303"
+  })
+
+user.street_arts.create!({
+  latitude: "39.724811",
+  longitude: "-104.987460",
+  address: "511 Broadway",
+  city: "Denver",
+  state: "CO",
+  zipcode: "80203",
+  image_urls: ["https://res.cloudinary.com/ds6dxgvxo/image/upload/v1600126451/Screen_Shot_2020-09-14_at_5.33.54_PM_sodr3n.png", "https://res.cloudinary.com/ds6dxgvxo/image/upload/v1600126445/Screen_Shot_2020-09-14_at_5.33.40_PM_ixdzhb.png"],
+  description: "Adorable elephant mural"
+  })
+
+user.street_arts.create!({
+  latitude: "39.760881",
+  longitude: "-104.973218",
+  address: "3100 N Downing Street",
+  city: "Denver",
+  state: "CO",
+  zipcode: "80205",
+  image_urls: ["https://res.cloudinary.com/ds6dxgvxo/image/upload/v1600126753/Screen_Shot_2020-09-14_at_5.38.04_PM_jfkgnv.png"],
+  description: "Community mural painted by Urban Arts Fund in Five Points",
+  artist_name: "Bimmer Torres",
+  instagram_handle: "_youngbeam"
+  })
+
+user.street_arts.create!({
+  latitude: "39.724225",
+  longitude: "-104.987760",
+  address: "555 Broadway",
+  city: "Denver",
+  state: "CO",
+  zipcode: "80203",
+  image_urls: ["https://res.cloudinary.com/ds6dxgvxo/image/upload/v1600127043/Screen_Shot_2020-09-14_at_5.43.56_PM_sakgfn.png"],
+  description: "Cute mountain dude with a weird pet",
+  artist_name: "Jaime Molina",
+  instagram_handle: "cuttyup"
+  })
+
+user.street_arts.create!({
+  latitude: "39.763746",
+  longitude: "-104.979043",
+  address: "3111 Larimer St.",
+  city: "Denver",
+  state: "CO",
+  zipcode: "80205",
+  image_urls: ["https://res.cloudinary.com/ds6dxgvxo/image/upload/v1600127288/Screen_Shot_2020-09-14_at_5.47.57_PM_o49zyu.png"],
+  description: "Cherry blossom, colorful bird, and beautiful dripping colors",
+  artist_name: "Luis Valle",
+  instagram_handle: "el_chan_guri"
+  })
+
+user.street_arts.create!({
+  latitude: "39.754465",
+  longitude: "-104.984706",
+  address: "955 24th St.",
+  city: "Denver",
+  state: "CO",
+  zipcode: "80205",
+  image_urls: ["https://res.cloudinary.com/ds6dxgvxo/image/upload/v1600127572/Screen_Shot_2020-09-14_at_5.52.03_PM_shnppp.png"],
+  description: "Colorful triangles"
+  })
+
+user.street_arts.create!({
+  latitude: "39.761176",
+  longitude: "-104.981822",
+  address: "2862 Larimer St.",
+  city: "Denver",
+  state: "CO",
+  zipcode: "80205",
+  image_urls: ["https://res.cloudinary.com/ds6dxgvxo/image/upload/v1600128276/Screen_Shot_2020-09-14_at_6.04.25_PM_xkivio.png"],
+  description: "Blue buffalo with yellow background and red sun",
+  artist_name: "Max Coleman",
+  instagram_handle: "oak_bloak"
+})
