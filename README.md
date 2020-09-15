@@ -4,6 +4,8 @@
 
 ![coverage](/public/coverage.png)
 
+![passing_tests](/public/passing_tests_2.png)
+
 ![passing_tests](/public/passing_tests.png)
 
 ## Table of Contents
