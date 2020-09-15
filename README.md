@@ -2,9 +2,9 @@
 
 ![build_passing](/public/build_passing.png)
 
-![coverage](/public/coverage.png)
-
 ![passing_tests](/public/passing_tests_2.png)
+
+![coverage](/public/coverage.png)
 
 ## Table of Contents
 
