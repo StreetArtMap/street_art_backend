@@ -10,7 +10,7 @@ describe Tour, type: :poro do
       city: 'Denver',
       state: 'CO',
       zipcode: '80218',
-      image_urls: "['/public/boxing_nurse.png']",
+      image_urls: "['/public/hands.png']",
       description:'Nurse wearing boxing gloves.',
       artist_name: 'Austin Zucchini-Fowler',
       instagram_handle: 'austinzart'
@@ -31,7 +31,7 @@ describe Tour, type: :poro do
       city: 'Denver',
       state: 'CO',
       zipcode: '80218',
-      image_urls: "['/public/boxing_nurse.png']",
+      image_urls: "['/public/hands.png']",
       description:'Nurse wearing boxing gloves.',
       artist_name: 'Austin Zucchini-Fowler',
       instagram_handle: 'austinzart'
@@ -44,7 +44,7 @@ describe Tour, type: :poro do
       city: 'Denver',
       state: 'CO',
       zipcode: '80205',
-      image_urls: "['/public/botanicare.png']",
+      image_urls: "['/public/hands.png']",
       description:'Her with plants'
       })
 
@@ -55,7 +55,7 @@ describe Tour, type: :poro do
       city: 'Denver',
       state: 'CO',
       zipcode: '80205',
-      image_urls: "['/public/pichi_and_avo.png']",
+      image_urls: "['/public/hands.png']",
       description: 'Hermes mural',
       artist_name: 'PichiAvo',
       instagram_handle: 'pichiavo'
@@ -68,7 +68,7 @@ describe Tour, type: :poro do
       city: 'Denver',
       state: 'CO',
       zipcode: '80205',
-      image_urls: "['/public/snake.png']",
+      image_urls: "['/public/hands.png']",
       description: 'Snake and moon',
       artist_name: 'Lauren Napolitano',
       instagram_handle: 'peptalks'
@@ -81,7 +81,7 @@ describe Tour, type: :poro do
       city: 'Denver',
       state: 'CO',
       zipcode: '80205',
-      image_urls: "['/public/wolflady.png']",
+      image_urls: "['/public/hands.png']",
       description: 'Wolf lady mural'
       })
 
@@ -136,7 +136,7 @@ describe Tour, type: :poro do
       city: 'Denver',
       state: 'CO',
       zipcode: '80205',
-      image_urls: "['/public/botanicare.png']",
+      image_urls: "['/public/hands.png']",
       description:'Her with plants'
       })
 
@@ -147,7 +147,7 @@ describe Tour, type: :poro do
       city: 'Denver',
       state: 'CO',
       zipcode: '80205',
-      image_urls: "['/public/pichi_and_avo.png']",
+      image_urls: "['/public/hands.png']",
       description: 'Hermes mural',
       artist_name: 'PichiAvo',
       instagram_handle: 'pichiavo'
@@ -160,7 +160,7 @@ describe Tour, type: :poro do
       city: 'Denver',
       state: 'CO',
       zipcode: '80205',
-      image_urls: "['/public/snake.png']",
+      image_urls: "['/public/hands.png']",
       description: 'Snake and moon',
       artist_name: 'Lauren Napolitano',
       instagram_handle: 'peptalks'
@@ -173,7 +173,7 @@ describe Tour, type: :poro do
       city: 'Denver',
       state: 'CO',
       zipcode: '80205',
-      image_urls: "['/public/wolflady.png']",
+      image_urls: "['/public/hands.png']",
       description: 'Wolf lady mural'
       })
 
