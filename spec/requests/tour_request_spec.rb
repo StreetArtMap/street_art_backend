@@ -12,7 +12,7 @@ RSpec.describe "tour requests", type: :request do
       city: 'Denver',
       state: 'CO',
       zipcode: '80206',
-      image_urls: "['/public/hands.png', '/public/hand.png']",
+      image_urls: "['/public/hands.png']",
       description:'Honoring missed connections',
       artist_name: 'Lauren Napolitano',
       instagram_handle: 'peptalks'
@@ -25,7 +25,7 @@ RSpec.describe "tour requests", type: :request do
       city: 'Denver',
       state: 'CO',
       zipcode: '80206',
-      image_urls: "['/public/helen.png', '/public/helen2.png', '/public/helen3.png']",
+      image_urls: "['/public/helen.png']",
       description:'With this building I wanted to create a chronological Greek narrative. The piece starts with an egg hatching, hinting at the myth of Leda and the Swan. The mural ends with an image of Helen of Troy and her sister.',
       art_name: 'The birth of Helen and Clytemnestra',
       artist_name: 'Nick Napoletano',
