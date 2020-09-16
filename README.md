@@ -37,11 +37,15 @@ Though we had intended to build our entire API service in GraphQL, we ended up c
 
 ### REST Endpoint
 
-*in production*
+Running on local server: 
+
+`GET 'localhost:3000/tours'`
+
+Running in production: 
+
 `GET 'https://streetwalker-backend/tours'`
 
-*on local server*
-`GET 'localhost:3000/tours'`
+--- 
 
 Sample response:
 
@@ -77,6 +81,8 @@ Running in production:
 
   }`
 
+--- 
+
 Sample response:
 
 ![streetArts](/public/street_arts_response.png)
@@ -96,6 +102,8 @@ Sample response:
      }
 
   }`
+  
+---
 
 Sample response:
 
@@ -149,6 +157,8 @@ Sample response:
 
       }`
 
+---
+
 Sample response:
 
 ![createStreetArt](/public/create_street_art.png)
@@ -174,6 +184,8 @@ Sample response:
            }
 
      }`
+
+---
 
 Sample response:
 
@@ -202,6 +214,8 @@ Sample response:
            }
 
        }`
+
+---
 
 Sample response:
 
