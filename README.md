@@ -225,6 +225,7 @@ Sample response:
 
 - Rails 5.1.7
 - Ruby 2.6.3
+- RSpec
 - PostgreSQL
 - GraphQL
 - Heroku
