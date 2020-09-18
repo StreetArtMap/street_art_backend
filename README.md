@@ -255,7 +255,7 @@ Sample response:
 
 ## Future Iterations <a name="future"></a>
 
-Though we met our MVP for this project, we still have a long list of features we would like to add to future iterations! A few of there were already enumerated above in the [database](#schema) section.
+Though we met our MVP for this project, we still have a long list of features we would like to add to future iterations! A few of these were already enumerated above in the [database](#schema) section.
 
 - When selecting a tour, the user is able to specify whether they will be walking, biking, or driving.
 
