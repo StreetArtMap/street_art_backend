@@ -1,7 +1,7 @@
 require 'rails_helper'
 require 'graphql'
 
-RSpec.describe "art requests", type: :request do
+RSpec.describe "user requests", type: :request do
 
   before(:each) do
     @user = FactoryBot.create(:user)
@@ -11,13 +11,13 @@ RSpec.describe "art requests", type: :request do
     User.delete_all
   end
 
-  it "returns all StreetArt" do
+  it "returns all Users" do
     post "/graphql", params: {query: "{users {id, username }}", operationName: nil, context: nil}
 
     response = JSON.parse(@response.body, symbolize_names: true)
 
     expect(response[:data]).to be_a(Hash)
-    expect(response[:data][:users][0][:id].to_i).to be_a(Integer)
+    expect(response[:data][:users][0][:id].to_i).to eq(User.last.id)
   end
 
   it 'handles variables' do
@@ -26,7 +26,7 @@ RSpec.describe "art requests", type: :request do
     response = JSON.parse(@response.body, symbolize_names: true)
 
     expect(response[:data]).to be_a(Hash)
-    expect(response[:data][:users][0][:id].to_i).to be_a(Integer)
+    expect(response[:data][:users][0][:id].to_i).to eq(User.last.id)
   end
 
   it 'handles variables' do
@@ -35,6 +35,30 @@ RSpec.describe "art requests", type: :request do
     response = JSON.parse(@response.body, symbolize_names: true)
 
     expect(response[:data]).to be_a(Hash)
-    expect(response[:data][:users][0][:id].to_i).to be_a(Integer)
+    expect(response[:data][:users][0][:id].to_i).to eq(User.last.id)
+  end
+
+  it 'creates new user' do
+    post '/graphql', params: { query: new_user_query}
+    response = JSON.parse(@response.body, symbolize_names: true)
+
+    expect(response[:data]).to be_a(Hash)
+    expect(response[:data][:createUser][:id].to_i).to eq(User.last.id)
+  end
+
+  def new_user_query
+    <<~GQL
+      mutation {
+        createUser ( input: {
+          username: "HankHill"
+          passwordDigest: "AlamoB33r"
+          email: "ProPAIN@aol.com"
+          })
+          {
+            id
+            username
+          }
+      }
+    GQL
   end
 end
