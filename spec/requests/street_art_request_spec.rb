@@ -6,12 +6,13 @@ RSpec.describe "art requests", type: :request do
   before(:all) do
     @user = FactoryBot.create(:user)
     2.times do
-      FactoryBot.create(:street_art, user: @user)
+      @user.street_arts << FactoryBot.create(:street_art, user: @user)
     end
     @street_art = @user.street_arts[0]
   end
 
   after(:context) do
+    Favorite.delete_all
     StreetArt.delete_all
     User.delete_all
   end
@@ -37,7 +38,6 @@ RSpec.describe "art requests", type: :request do
   end
 
   it "add new street art post to database" do
-
     post "/graphql", params: { query: base_query(user_id: @user.id)}
 
     response = JSON.parse(@response.body, symbolize_names: true)
@@ -73,14 +73,14 @@ RSpec.describe "art requests", type: :request do
   end
 
   it "favorites a street art post" do
-    expect(@street_art.favorite).to eq(false)
-
-    post "/graphql", params: { query: favorite_query(street_art_id: @street_art.id)}
+    expect(@user.favorites.count).to eq(0)
+    post "/graphql", params: { query: favorite_query(user_id: @user.id, street_art_id: @street_art.id)}
 
     response = JSON.parse(@response.body, symbolize_names: true)
 
-    expect(response[:data][:favoriteStreetArt][:id].to_i).to eq(@street_art.id)
-    expect(response[:data][:favoriteStreetArt][:favorite]).to eq(true)
+    expect(response[:data][:favoriteStreetArt][:streetArtId].to_i).to eq(@street_art.id)
+    expect(response[:data][:favoriteStreetArt][:userId]).to eq(@user.id)
+    expect(response[:data][:favoriteStreetArt][:id].to_i).to eq(@user.favorites[0].id)
   end
 
   it "visits a street art post" do
@@ -171,15 +171,16 @@ RSpec.describe "art requests", type: :request do
     GQL
   end
 
-  def favorite_query(street_art_id:)
+  def favorite_query(street_art_id:, user_id:)
     <<~GQL
       mutation {
         favoriteStreetArt( input: {
           streetArtId: #{street_art_id}
-          favorite: true
+          userId: #{user_id}
         }) {
             id
-            favorite
+            streetArtId
+            userId
             }
       }
     GQL
