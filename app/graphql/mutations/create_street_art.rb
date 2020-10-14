@@ -20,18 +20,19 @@ class Mutations::CreateStreetArt < Mutations::BaseMutation
               zipcode: nil, image_urls:, description: nil, artist_name: nil, art_name: nil,
               instagram_handle: nil, favorite: false, visited: false, user_id:)
 
-    User.find(user_id).street_arts.create!(latitude: latitude,
-                                          longitude: longitude,
-                                          address: address,
-                                          city: city,
-                                          state: state,
-                                          zipcode: zipcode,
-                                          image_urls: image_urls,
-                                          description: description,
-                                          artist_name: artist_name,
-                                          art_name: art_name,
-                                          instagram_handle: instagram_handle,
-                                          favorite: favorite,
-                                          visited: visited)
+    StreetArt.create(latitude: latitude,
+                    longitude: longitude,
+                    address: address,
+                    city: city,
+                    state: state,
+                    zipcode: zipcode,
+                    image_urls: image_urls,
+                    description: description,
+                    artist_name: artist_name,
+                    art_name: art_name,
+                    instagram_handle: instagram_handle,
+                    favorite: favorite,
+                    visited: visited,
+                    user_id: user_id)
   end
 end
