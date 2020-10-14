@@ -1,6 +1,8 @@
 class StreetArt < ApplicationRecord
   before_save :validate_location
   belongs_to :user
+  has_many :favorites
+  has_many :users, through: :favorites
   # serialize :image_urls, Array
   validates_presence_of :image_urls
 

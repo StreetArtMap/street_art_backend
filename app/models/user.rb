@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   has_many :street_arts
+  has_many :favorites
 
   validates_presence_of :username
   validates :email, uniqueness: true, presence: true
