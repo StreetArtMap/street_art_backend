@@ -51,8 +51,12 @@ RSpec.describe "user requests", type: :request do
       mutation {
         createUser ( input: {
           username: "HankHill"
-          passwordDigest: "AlamoB33r"
-          email: "ProPAIN@aol.com"
+          authProvider: {
+            credentials: {
+              email: "ProPAIN@aol.com"
+              password: "AlamoB33r"
+            }
+          }
           })
           {
             id
