@@ -3,7 +3,7 @@ require 'graphql'
 
 RSpec.describe "user requests", type: :request do
 
-  before(:each) do
+  before(:context) do
     @user = FactoryBot.create(:user)
   end
 
@@ -46,6 +46,14 @@ RSpec.describe "user requests", type: :request do
     expect(response[:data][:createUser][:id].to_i).to eq(User.last.id)
   end
 
+  it "sign in user" do
+    User.create(username: "FROG", email: "FrogStuff@aol.com", password: "Ribbit")
+    post '/graphql', params: { query: sign_in_user }
+    response = JSON.parse(@response.body, symbolize_names: true)
+
+    expect(response[:data][:signinUser][:token]).to_not eq(nil)
+  end
+
   def new_user_query
     <<~GQL
       mutation {
@@ -61,6 +69,22 @@ RSpec.describe "user requests", type: :request do
           {
             id
             username
+          }
+      }
+    GQL
+  end
+
+  def sign_in_user
+    <<~GQL
+      mutation {
+        signinUser ( input: {
+            credentials: {
+              email: "FrogStuff@aol.com"
+              password: "Ribbit"
+            }
+          })
+          {
+              token
           }
       }
     GQL
