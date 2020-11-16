@@ -1,12 +1,10 @@
 class Mutations::FavoriteStreetArt < Mutations::BaseMutation
-  argument :favorite, Boolean, required: true
+  argument :user_id, Integer, required: true
   argument :street_art_id, Integer, required: true
 
-  type Types::StreetArtType
+  type Types::FavoriteType
 
-  def resolve(favorite: ,street_art_id:)
-    art = StreetArt.find(street_art_id)
-    art.update(favorite: favorite)
-    art.reload
+  def resolve(user_id:, street_art_id:)
+    Favorite.create(user_id: user_id, street_art_id: street_art_id)
   end
 end

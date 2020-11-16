@@ -3,6 +3,7 @@ require 'rails_helper'
 describe Tour, type: :poro do
   it "can get colfax tour data" do
     user = FactoryBot.create(:user)
+
     user.street_arts.create!({
       latitude: '39.740254',
       longitude: '-104.966621',
@@ -13,7 +14,8 @@ describe Tour, type: :poro do
       image_urls: "['/public/hands.png']",
       description:'Nurse wearing boxing gloves.',
       artist_name: 'Austin Zucchini-Fowler',
-      instagram_handle: 'austinzart'
+      instagram_handle: 'austinzart',
+      user_id: user.id
       })
     tour = ColfaxTour.new
 
@@ -34,7 +36,8 @@ describe Tour, type: :poro do
       image_urls: "['/public/hands.png']",
       description:'Nurse wearing boxing gloves.',
       artist_name: 'Austin Zucchini-Fowler',
-      instagram_handle: 'austinzart'
+      instagram_handle: 'austinzart',
+      user_id: user.id
       })
 
     user.street_arts.create!({
@@ -45,7 +48,8 @@ describe Tour, type: :poro do
       state: 'CO',
       zipcode: '80205',
       image_urls: "['/public/hands.png']",
-      description:'Her with plants'
+      description:'Her with plants',
+      user_id: user.id
       })
 
     user.street_arts.create!({
@@ -58,7 +62,8 @@ describe Tour, type: :poro do
       image_urls: "['/public/hands.png']",
       description: 'Hermes mural',
       artist_name: 'PichiAvo',
-      instagram_handle: 'pichiavo'
+      instagram_handle: 'pichiavo',
+      user_id: user.id
       })
 
     user.street_arts.create!({
@@ -71,7 +76,8 @@ describe Tour, type: :poro do
       image_urls: "['/public/hands.png']",
       description: 'Snake and moon',
       artist_name: 'Lauren Napolitano',
-      instagram_handle: 'peptalks'
+      instagram_handle: 'peptalks',
+      user_id: user.id
       })
 
     user.street_arts.create!({
@@ -82,7 +88,8 @@ describe Tour, type: :poro do
       state: 'CO',
       zipcode: '80205',
       image_urls: "['/public/hands.png']",
-      description: 'Wolf lady mural'
+      description: 'Wolf lady mural',
+      user_id: user.id
       })
 
     tour = RinoTour.new
@@ -103,7 +110,8 @@ describe Tour, type: :poro do
       state: 'CO',
       zipcode: '80204',
       image_urls: ["https://res.cloudinary.com/ds6dxgvxo/image/upload/v1600121456/Screen_Shot_2020-09-14_at_4.10.48_PM_qjcdiy.png"],
-      description: 'Aztec royalty'
+      description: 'Aztec royalty',
+      user_id: user.id
       })
 
     user.street_arts.create!({
@@ -116,7 +124,8 @@ describe Tour, type: :poro do
       image_urls: ["https://res.cloudinary.com/ds6dxgvxo/image/upload/v1600121858/Screen_Shot_2020-09-14_at_4.17.10_PM_metdcc.png"],
       description: 'Skeleton playing guitar',
       artist_name: 'Jaime Molina',
-      instagram_handle: 'cuttyup'
+      instagram_handle: 'cuttyup',
+      user_id: user.id
       })
 
     tour = SantaFeTour.new
@@ -137,7 +146,8 @@ describe Tour, type: :poro do
       state: 'CO',
       zipcode: '80205',
       image_urls: "['/public/hands.png']",
-      description:'Her with plants'
+      description:'Her with plants',
+      user_id: user.id
       })
 
     user.street_arts.create!({
@@ -150,7 +160,8 @@ describe Tour, type: :poro do
       image_urls: "['/public/hands.png']",
       description: 'Hermes mural',
       artist_name: 'PichiAvo',
-      instagram_handle: 'pichiavo'
+      instagram_handle: 'pichiavo',
+      user_id: user.id
       })
 
     user.street_arts.create!({
@@ -163,7 +174,8 @@ describe Tour, type: :poro do
       image_urls: "['/public/hands.png']",
       description: 'Snake and moon',
       artist_name: 'Lauren Napolitano',
-      instagram_handle: 'peptalks'
+      instagram_handle: 'peptalks',
+      user_id: user.id
       })
 
     user.street_arts.create!({
@@ -174,7 +186,8 @@ describe Tour, type: :poro do
       state: 'CO',
       zipcode: '80205',
       image_urls: "['/public/hands.png']",
-      description: 'Wolf lady mural'
+      description: 'Wolf lady mural',
+      user_id: user.id
       })
 
     tour = RinoTour.new
@@ -198,7 +211,8 @@ describe Tour, type: :poro do
       state: 'CO',
       zipcode: '80204',
       image_urls: ["https://res.cloudinary.com/ds6dxgvxo/image/upload/v1600121456/Screen_Shot_2020-09-14_at_4.10.48_PM_qjcdiy.png"],
-      description: 'Aztec royalty'
+      description: 'Aztec royalty',
+      user_id: user.id
       })
 
     user.street_arts.create!({
@@ -211,7 +225,8 @@ describe Tour, type: :poro do
       image_urls: ["https://res.cloudinary.com/ds6dxgvxo/image/upload/v1600121858/Screen_Shot_2020-09-14_at_4.17.10_PM_metdcc.png"],
       description: 'Skeleton playing guitar',
       artist_name: 'Jaime Molina',
-      instagram_handle: 'cuttyup'
+      instagram_handle: 'cuttyup',
+      user_id: user.id
       })
 
     user.street_arts.create!({
@@ -222,7 +237,8 @@ describe Tour, type: :poro do
       state: "CO",
       zipcode: "80204",
       image_urls: ["https://res.cloudinary.com/ds6dxgvxo/image/upload/v1600124630/Screen_Shot_2020-09-14_at_5.03.43_PM_gwv9e9.png"],
-      description: "Colorful mural with fangs"
+      description: "Colorful mural with fangs",
+      user_id: user.id
       })
 
     user.street_arts.create!({
@@ -235,7 +251,8 @@ describe Tour, type: :poro do
       image_urls: ["https://res.cloudinary.com/ds6dxgvxo/image/upload/v1600124901/Screen_Shot_2020-09-14_at_5.08.15_PM_rhefwv.png"],
       description: "Denver city mural",
       artist_name: "Pat Milbery",
-      instagram_handle: "patmilbery"
+      instagram_handle: "patmilbery",
+      user_id: user.id
       })
 
     tour = SantaFeTour.new

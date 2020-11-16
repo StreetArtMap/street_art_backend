@@ -10,5 +10,6 @@ FactoryBot.define do
     image_urls {[ Faker::Fillmurray.image, Faker::Fillmurray.image, Faker::Fillmurray.image ]}
     description { Faker::Movies::StarWars.quote }
     artist_name { Faker::Artist.name }
+    user_id {User.last.id}
   end
 end

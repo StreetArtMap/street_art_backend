@@ -1,5 +1,10 @@
 class User < ApplicationRecord
   has_many :street_arts
+  has_many :favorites
+
   validates_presence_of :username
-  validates_presence_of :email
+  validates :email, uniqueness: true, presence: true
+  validates_presence_of :password_digest, require: true
+
+  has_secure_password
 end
