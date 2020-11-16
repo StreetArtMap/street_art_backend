@@ -14,7 +14,7 @@ class Mutations::SignInUser < Mutations::BaseMutation
     return unless user
     return unless user.authenticate(credentials[:password])
 
-    token = "Sup3RS3creTT0K3N"
+    token = JsonWebToken.encode(user_id: user.id)
 
     {user: user, token: token}
   end
